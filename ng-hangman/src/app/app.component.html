@@ -1,0 +1,8 @@
+<app-hangman-display [wrongGuess]="wrongGuessCount"></app-hangman-display>
+<p>Incorrect guesses: {{ wrongGuessCount }}</p>
+<p>Maxim wrong guesses: {{ MaxWrongGuesses }}</p>
+<app-hangman-question [selectedLetter]="selectedLetter || ''" (wordUpdated)="onWordUpdated($event)" (wrongGuess)="onWrongGuess($event)"></app-hangman-question>
+<app-hangman-keyboard (letterSelected)="onLetterSelected($event)"></app-hangman-keyboard>
+<button (click)="resetGame()">New Game</button>
+
+<router-outlet></router-outlet>

@@ -1,0 +1,11 @@
+<p>Select difficulty</p>
+<button (click)="setDifficulty('easy')">Easy</button>
+<button (click)="setDifficulty('medium')">Medium</button>
+<button (click)="setDifficulty('hard')">Hard</button>
+
+<div>
+    <p>Guess the word:</p>
+    <p>{{displayedWord.join(' ')}}</p>
+    <p>{{wonMessage}}
+</div>
+  
