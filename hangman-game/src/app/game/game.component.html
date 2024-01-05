@@ -1,0 +1,19 @@
+<div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 100vh;">
+    <p>Select difficulty</p>
+    <div style="display: flex; justify-content: center;">
+        <button style="margin-right: 10px;" (click)="setDifficulty('easy')">Easy</button>
+        <button style="margin-right: 10px;" (click)="setDifficulty('medium')">Medium</button>
+        <button (click)="setDifficulty('hard')">Hard</button>
+    </div>
+    <button style="margin-top: 10px;" (click)="startNewGame()">Start Game</button>
+  
+    <div>
+      <p>Guess the word:</p>
+      <p>{{displayedWord.join(' ')}}</p>
+    </div>
+
+    <p>{{ gameMessage }}</p>
+  
+    <app-hangman-display [wrongGuess]="wrongGuessCount"></app-hangman-display>
+    <app-hangman-keyboard (letterSelected)="guessLetter($event)"></app-hangman-keyboard>
+  </div>

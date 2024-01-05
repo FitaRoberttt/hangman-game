@@ -1,0 +1,23 @@
+<div class="keyboard" >
+    <div class="keyboard-line">
+        <ng-container *ngFor="let key of letters.slice(0, 10)">
+            <button (click)="selectLetter(key)" *ngIf="!pressedKeys.includes(key)">
+                {{ key }}
+            </button>
+        </ng-container>
+    </div>
+    <div class="keyboard-line">
+        <ng-container *ngFor="let key of letters.slice(10, 19)">
+            <button (click)="selectLetter(key)" *ngIf="!pressedKeys.includes(key)">
+                {{ key }}
+            </button>
+        </ng-container>
+    </div>
+    <div class="keyboard-line">
+        <ng-container *ngFor="let key of letters.slice(19)">
+            <button (click)="selectLetter(key)" *ngIf="!pressedKeys.includes(key)">
+                {{ key }}
+            </button>
+        </ng-container>
+    </div>
+</div>

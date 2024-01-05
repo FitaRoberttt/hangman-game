@@ -1,0 +1,31 @@
+/* tastatura.component.css */
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  
+  .keyboard button {
+    width: 50px;
+    height: 50px;
+    font-size: 14px;
+    background-color: #f2f2f2;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    cursor: pointer;
+    margin: 5px; /* Add margin to provide spacing between buttons */
+  }
+  
+  .keyboard button:hover {
+    background-color: #ddd;
+  }
+  
+  .keyboard button:active {
+    background-color: #bbb;
+  }
+  
+  
